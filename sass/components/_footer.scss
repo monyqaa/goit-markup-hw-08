@@ -1,0 +1,137 @@
+.footer {
+  background: var(--second-background);
+  padding: 60px 0;
+}
+
+.footer {
+  .logo {
+    color: var(--second-type-color);
+  }
+}
+
+.footer {
+  .container {
+    display: flex;
+  }
+}
+
+.footer__contact-list {
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+.footer__address-link {
+  line-height: 1.71;
+  color: var(--second-type-color);
+  text-decoration: none;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  transition: color var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--highlight-color);
+  }
+}
+
+.footer__mail-item {
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+.footer__contact-link {
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--highlight-color);
+  }
+}
+
+.footer__socials-wrapper {
+  margin-left: 70px;
+}
+
+.footer__title {
+  color: var(--second-type-color);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer__socials-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__socials-item {
+  margin-right: 10px;
+}
+
+.footer__socials-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--second-type-color);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: background-color var(--transition), fill var(--transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--highlight-color);
+    fill: var(--second-type-color);
+  }
+}
+
+.footer__socials-link {
+  .social-icon {
+    fill: currentColor;
+  }
+}
+
+.footer__newsletter-form-wrapper {
+  margin-left: 78px;
+}
+
+.footer__newsletter-form {
+  display: flex;
+  gap: 12px;
+}
+
+.footer__newsletter-form-input {
+  width: 358px;
+  height: 50px;
+  background-color: transparent;
+  outline: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding: 15px 0 15px 16px;
+  color: var(--second-type-color);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.footer__send-icon {
+  vertical-align: middle;
+  margin-left: 24px;
+}
