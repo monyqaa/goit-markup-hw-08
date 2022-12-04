@@ -18,13 +18,14 @@
 
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
+
   <body>
     <header class="header">
       <div class="container header__wrapper">
         <a href="./index.html" class="logo"
           ><span class="logo__highlight">Web</span>Studio</a
         >
-        <nav>
+        <nav class="header__nav">
           <ul class="header__nav-list">
             <li>
               <a
@@ -57,6 +58,65 @@
             </a>
           </li>
         </ul>
+
+        <!-- mobile menu -->
+        <div class="header__mobile-menu">
+          <button type="button" class="header__mobile-menu-open-btn">
+            <svg width="40" height="40">
+              <use href="./images/icons.svg#icon-mobile-menu"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="mobile-menu d-none">
+          <div class="mobile-menu__container">
+          <button class="toggle-menu">x</button>
+          
+          <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__nav-list">
+              <li>
+                <a
+                  href="./index.html"
+                  class="mobile-menu__nav-link mobile-menu__nav-link--active-now">
+                  Agencja
+                  </a>
+              </li>
+              <li>
+                <a href="./portfolio.html" class="mobile-menu__nav-link">Portfolio</a>
+              </li>
+              <li><a href="#" class="mobile-menu__nav-link">Kontakt</a></li>
+            </ul>
+          </nav>
+
+          <ul class="mobile-menu__contact-list">
+            <li>
+              <a href="tel:48111111111" class="mobile-menu__contact-link">
+                +48 111 111 111
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@devstudio.com" class="mobile-menu__contact-link">
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+
+          <ul class="mobile-menu__social-list">
+            <li>
+              <a href="#" class="mobile-menu__social-link">Instagram</a>
+            </li>
+            <li>
+              <a href="#" class="mobile-menu__social-link">Twitter</a>
+            </li>
+            <li>
+              <a href="#" class="mobile-menu__social-link">Facebook</a>
+            </li>
+            <li>
+              <a href="#" class="mobile-menu__social-link">Linkedin</a>
+            </li>
+          </ul>
+        </div>
+        <!-- mobile menu end -->
       </div>
     </header>
 
@@ -76,7 +136,7 @@
         <div class="container">
           <h2 class="hide">Nasze atuty</h2>
           <ul class="strengths">
-            <li>
+            <li class="strengths__item">
               <div class="strengths__icon-wrapper">
                 <svg width="70" height="70">
                   <use href="./images/icons.svg#icon-antenna-1"></use>
@@ -84,12 +144,12 @@
               </div>
               <h3 class="strengths__title">LOREM IPSUM</h3>
               <p class="strengths__text">
-                Lorem ipsum dolor sit amet, consectetur<br />
-                adipiscing elit. Nam vel arcu sem. Sed <br />
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Nam vel arcu sem. Sed 
                 non sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li>
+            <li class="strengths__item">
               <div class="strengths__icon-wrapper">
                 <svg width="70" height="70">
                   <use href="./images/icons.svg#icon-clock-1"></use>
@@ -97,12 +157,12 @@
               </div>
               <h3 class="strengths__title">LOREM IPSUM</h3>
               <p class="strengths__text">
-                Lorem ipsum dolor sit amet, consectetur<br />
-                adipiscing elit. Nam vel arcu sem. Sed <br />
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Nam vel arcu sem. Sed 
                 non sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li>
+            <li class="strengths__item">
               <div class="strengths__icon-wrapper">
                 <svg width="70" height="70">
                   <use href="./images/icons.svg#icon-diagram-1"></use>
@@ -110,12 +170,12 @@
               </div>
               <h3 class="strengths__title">LOREM IPSUM</h3>
               <p class="strengths__text">
-                Lorem ipsum dolor sit amet, consectetur<br />
-                adipiscing elit. Nam vel arcu sem. Sed <br />
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Nam vel arcu sem. Sed 
                 non sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li>
+            <li class="strengths__item">
               <div class="strengths__icon-wrapper">
                 <svg width="70" height="70">
                   <use href="./images/icons.svg#icon-astronaut-1"></use>
@@ -123,8 +183,8 @@
               </div>
               <h3 class="strengths__title">LOREM IPSUM</h3>
               <p class="strengths__text">
-                Lorem ipsum dolor sit amet, consectetur<br />
-                adipiscing elit. Nam vel arcu sem. Sed <br />
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Nam vel arcu sem. Sed
                 non sodales dui. Interdum et malesuada
               </p>
             </li>
@@ -178,12 +238,26 @@
           <h2 class="section__heading">Nasz zespół</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                src="./images/1_product_designer.jpg"
-                alt="mężczyzna product designer"
-                width="270"
-                height="260"
-              />
+
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team1-lg@1x.jpg 1x, ./images/team1-lg@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team1-md@1x.jpg 1x, ./images/team1-md@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team1-sm@1x.jpg 1x, ./images/team1-sm@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img class="team__img" src="./images/1_product_designer.jpg" alt="team member image" />
+              </picture>
+
               <div class="team__description-wrapper">
                 <h3 class="team__title">John Doe</h3>
                 <p class="team__text">Product Designer</p>
@@ -218,14 +292,30 @@
                   </li>
                 </ul>
               </div>
+
             </li>
+
             <li class="team__item">
-              <img
-                src="./images/2_frontend_developer.jpg"
-                alt="kobieta frontend developer"
-                width="270"
-                height="260"
-              />
+
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team2-lg@1x.jpg 1x, ./images/team2-lg@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team2-md@1x.jpg 1x, ./images/team2-md@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team2-sm@1x.jpg 1x, ./images/team2-sm@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img class="team__img" src="./images/2_frontend_developer.jpg" alt="team member image" />
+              </picture>
+            
               <div class="team__description-wrapper">
                 <h3 class="team__title">John Doe</h3>
                 <p class="team__text">Frontend Developer</p>
@@ -260,14 +350,29 @@
                   </li>
                 </ul>
               </div>
+
             </li>
             <li class="team__item">
-              <img
-                src="./images/3_marketing.jpg"
-                alt="mężczyzna marketing"
-                width="270"
-                height="260"
-              />
+
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team3-lg@1x.jpg 1x, ./images/team3-lg@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team3-md@1x.jpg 1x, ./images/team3-md@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team3-sm@1x.jpg 1x, ./images/team3-sm@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img class="team__img" src="./images/3_marketing.jpg" alt="team member image" />
+              </picture>
+              
               <div class="team__description-wrapper">
                 <h3 class="team__title">John Doe</h3>
                 <p class="team__text">Marketing</p>
@@ -302,14 +407,29 @@
                   </li>
                 </ul>
               </div>
+
             </li>
             <li class="team__item">
-              <img
-                src="./images/4_ui_designer.jpg"
-                alt="mężczyzna ui designer"
-                width="270"
-                height="260"
-              />
+
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team4-lg@1x.jpg 1x, ./images/team4-lg@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team4-md@1x.jpg 1x, ./images/team4-md@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team4-sm@1x.jpg 1x, ./images/team4-sm@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img class="team__img" src="./images/4_ui_designer.jpg" alt="team member image" />
+              </picture>
+            
               <div class="team__description-wrapper">
                 <h3 class="team__title">John Doe</h3>
                 <p class="team__text">UI Designer</p>
@@ -349,7 +469,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <!-- <section class="section">
         <div class="container">
           <h2 class="section__heading">Nasi klienci</h2>
           <div>
@@ -399,10 +519,10 @@
             </ul>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div>
           <a href="./index.html" class="logo"
@@ -565,8 +685,9 @@
           <button class="btn contact-form__button" type="submit">Wyślij</button>
         </form>
       </div>
-    </div>
+    </div> -->
 
     <script src="./js/modal.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

@@ -1,8 +1,12 @@
 .strengths {
   display: flex;
+  flex-direction: column;
   gap: 30px;
-  justify-content: center;
   align-items: center;
+}
+
+.strengths__item {
+  width: 100%;
 }
 
 .strengths__icon-wrapper {
@@ -17,9 +21,59 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  text-align: center;
 }
 
 .strengths__text {
   line-height: 1.71;
   color: var(--paragrapgh-color);
 }
+
+@media screen and (min-width: $tablet) {
+  .strengths {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .strengths__item {
+    width: 50%;
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  .strengths__title {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .strengths__item {
+    width: 25%;
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}
+
+// .strengths {
+//   display: flex;
+//   gap: 30px;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .strengths__icon-wrapper {
+//   background: var(--third-background);
+//   border-radius: 4px;
+//   padding-top: 25px;
+//   padding-bottom: 25px;
+//   text-align: center;
+// }
+
+// .strengths__title {
+//   font-weight: 700;
+//   font-size: 14px;
+//   line-height: 1.14;
+// }
+
+// .strengths__text {
+//   line-height: 1.71;
+//   color: var(--paragrapgh-color);
+// }

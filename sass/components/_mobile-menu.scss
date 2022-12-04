@@ -1,0 +1,30 @@
+.header__mobile-menu {
+  &:hover {
+    fill: var(--highlight-color);
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.header__mobile-menu-open-btn {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mobile-menu {
+  position: fixed;
+  background-color: var(--second-type-color);
+  width: 100vw;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}

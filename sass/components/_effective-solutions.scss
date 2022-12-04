@@ -4,20 +4,95 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/background_img.jpg");
+    url("../images/background_img_mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  padding: 200px 0;
+  padding: 118px 0;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/background_img_mobile@2x.jpg");
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/background_img_tablet@1x.jpg");
+
+    @media (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/background_img_tablet@2x.jpg");
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/background_img_desktop@1x.jpg");
+
+    @media (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/background_img_desktop@2x.jpg");
+    }
+  }
 }
 
 .effective-solutions__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.3636;
+  font-size: 26px;
+  line-height: 1.615;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--second-type-color);
+
+  @media screen and (min-width: $desktop) {
+    font-size: 44px;
+    line-height: 1.3636;
+  }
 }
+
+// .effective-solutions {
+//   background: rgba(47, 48, 58, 0.4);
+//   background-image: linear-gradient(
+//       rgba(47, 48, 58, 0.4),
+//       rgba(47, 48, 58, 0.4)
+//     ),
+//     url("../images/background_img.jpg");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   text-align: center;
+//   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+//   padding: 200px 0;
+// }
+
+// .effective-solutions__title {
+//   font-weight: 900;
+//   font-size: 44px;
+//   line-height: 1.3636;
+//   text-align: center;
+//   letter-spacing: 0.06em;
+//   text-transform: uppercase;
+//   color: var(--second-type-color);
+// }
