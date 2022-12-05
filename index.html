@@ -68,56 +68,62 @@
           </button>
         </div>
 
-        <div class="mobile-menu d-none">
-          <div class="mobile-menu__container">
-          <button class="toggle-menu">x</button>
+        <div class="mobile-menu d-none"> 
+          <div class="container mobile-menu__container">
+            <button class="mobile-menu__close-btn">
+              <svg class="mobile-menu__close-icon" width="40" height="40">
+                <use href="./images/icons.svg#icon-close_40px"></use>
+              </svg>
+            </button>
           
           <nav class="mobile-menu__nav">
             <ul class="mobile-menu__nav-list">
-              <li>
+              <li class="mobile-menu__nav-item">
                 <a
                   href="./index.html"
                   class="mobile-menu__nav-link mobile-menu__nav-link--active-now">
                   Agencja
-                  </a>
+                </a>
               </li>
-              <li>
+              <li class="mobile-menu__nav-item">
                 <a href="./portfolio.html" class="mobile-menu__nav-link">Portfolio</a>
               </li>
-              <li><a href="#" class="mobile-menu__nav-link">Kontakt</a></li>
+              <li class="mobile-menu__nav-item">
+                <a href="#" class="mobile-menu__nav-link">Kontakt</a>
+              </li>
             </ul>
           </nav>
 
           <ul class="mobile-menu__contact-list">
-            <li>
-              <a href="tel:48111111111" class="mobile-menu__contact-link">
+            <li class="mobile-menu__contact-item">
+              <a href="tel:48111111111" class="mobile-menu__contact-link mobile-menu__contact-link--tel">
                 +48 111 111 111
               </a>
             </li>
-            <li>
-              <a href="mailto:info@devstudio.com" class="mobile-menu__contact-link">
+            <li class="mobile-menu__contact-item">
+              <a href="mailto:info@devstudio.com" class="mobile-menu__contact-link mobile-menu__contact-link--mail">
                 info@devstudio.com
               </a>
             </li>
           </ul>
 
           <ul class="mobile-menu__social-list">
-            <li>
+            <li class="mobile-menu__social-item">
               <a href="#" class="mobile-menu__social-link">Instagram</a>
             </li>
-            <li>
+            <li class="mobile-menu__social-item">
               <a href="#" class="mobile-menu__social-link">Twitter</a>
             </li>
-            <li>
+            <li class="mobile-menu__social-item">
               <a href="#" class="mobile-menu__social-link">Facebook</a>
             </li>
-            <li>
-              <a href="#" class="mobile-menu__social-link">Linkedin</a>
+            <li class="mobile-menu__social-item">
+              <a href="#" class="mobile-menu__social-link">LinkedIn</a>
             </li>
           </ul>
+          </div>
+         <!-- mobile menu end -->
         </div>
-        <!-- mobile menu end -->
-      </div>
     </header>
 
     <main>
@@ -469,47 +475,47 @@
         </div>
       </section>
 
-      <!-- <section class="section">
+      <section class="section">
         <div class="container">
           <h2 class="section__heading">Nasi klienci</h2>
           <div>
             <ul class="clients">
-              <li>
+              <li class="clients__item">
                 <a class="clients__link" href="#">
                   <svg width="170" height="92">
                     <use href="./images/icons.svg#icon-Client-1"></use>
                   </svg>
                 </a>
               </li>
-              <li>
+              <li class="clients__item">
                 <a class="clients__link" href="#">
                   <svg width="170" height="92">
                     <use href="./images/icons.svg#icon-Client-2"></use>
                   </svg>
                 </a>
               </li>
-              <li>
+              <li class="clients__item">
                 <a class="clients__link" href="#">
                   <svg width="170" height="92">
                     <use href="./images/icons.svg#icon-Client-3"></use>
                   </svg>
                 </a>
               </li>
-              <li>
+              <li class="clients__item">
                 <a class="clients__link" href="#">
                   <svg width="170" height="92">
                     <use href="./images/icons.svg#icon-Client-4"></use>
                   </svg>
                 </a>
               </li>
-              <li>
+              <li class="clients__item">
                 <a class="clients__link" href="#">
                   <svg width="170" height="92">
                     <use href="./images/icons.svg#icon-Client-5"></use>
                   </svg>
                 </a>
               </li>
-              <li>
+              <li class="clients__item">
                 <a class="clients__link" href="#">
                   <svg width="170" height="92">
                     <use href="./images/icons.svg#icon-Client-6"></use>
@@ -519,12 +525,12 @@
             </ul>
           </div>
         </div>
-      </section> -->
+      </section>
     </main>
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container">
-        <div>
+        <div class="footer__links-wrapper">
           <a href="./index.html" class="logo"
             ><span class="logo__highlight">Web</span>Studio</a
           >
@@ -589,7 +595,7 @@
         <div class="footer__newsletter-form-wrapper">
           <h3 class="footer__title">ZAPISZ SIĘ DO NEWSLETTERA</h3>
           <form class="footer__newsletter-form">
-            <label>
+            <label class="footer__newsletter-form-label">
               <input
                 class="footer__newsletter-form-input"
                 type="email"
@@ -685,7 +691,7 @@
           <button class="btn contact-form__button" type="submit">Wyślij</button>
         </form>
       </div>
-    </div> -->
+    </div>
 
     <script src="./js/modal.js"></script>
     <script defer src="js/mobile-menu.js"></script>

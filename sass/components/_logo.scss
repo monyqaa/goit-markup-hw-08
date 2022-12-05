@@ -4,20 +4,13 @@
   line-height: 1.16;
   color: var(--main-text-color);
   text-decoration: none;
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.19;
+    font-size: 26px;
+  }
 }
 
 .logo__highlight {
   color: var(--highlight-color);
 }
-
-// .logo {
-//   font-family: var(--logo-font);
-//   line-height: 1.19;
-//   font-size: 26px;
-//   color: var(--main-text-color);
-//   text-decoration: none;
-// }
-
-// .logo__highlight {
-//   color: var(--highlight-color);
-// }

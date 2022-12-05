@@ -1,13 +1,21 @@
 .clients {
   display: flex;
+  flex-direction: row;
   gap: 30px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.clients__item {
+  width: 50%;
+  flex-basis: calc((100% - 30px) / 2);
 }
 
 .clients__link {
   display: flex;
   align-items: center;
+  justify-content: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
@@ -17,5 +25,17 @@
   &:focus {
     fill: var(--highlight-color);
     border: 1px solid var(--highlight-color);
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .clients__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .clients {
+    flex-wrap: nowrap;
   }
 }

@@ -1,8 +1,4 @@
 .header__mobile-menu {
-  &:hover {
-    fill: var(--highlight-color);
-  }
-
   @media screen and (min-width: $tablet) {
     display: none;
   }
@@ -18,13 +14,100 @@
   padding: 0;
   margin-top: 10px;
   margin-bottom: 10px;
+  transition: fill var(--transition);
+  &:hover {
+    fill: var(--highlight-color);
+  }
 }
 
 .mobile-menu {
   position: fixed;
+  z-index: 500;
   background-color: var(--second-type-color);
   width: 100vw;
+  height: 100vh;
   top: 0;
   left: 0;
-  height: 100vh;
+}
+
+.mobile-menu__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding: 48px 40px;
+}
+
+.mobile-menu__close-btn {
+  position: absolute;
+  display: block;
+  top: 10px;
+  right: 15px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  transition: fill var(--transition);
+
+  &:hover {
+    fill: var(--highlight-color);
+  }
+}
+
+.mobile-menu__nav-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__nav-link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: calc(47 / 40);
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+}
+
+.mobile-menu__nav-link--active-now {
+  color: var(--highlight-color);
+}
+
+.mobile-menu__contact-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__contact-link--tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.176;
+  color: var(--highlight-color);
+}
+
+.mobile-menu__contact-link--mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: var(--paragrapgh-color);
+}
+
+.mobile-menu__social-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+}
+
+.mobile-menu__social-item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
+}
+
+.mobile-menu__social-item:not(:first-child) {
+  padding-left: 10px;
+}
+
+.mobile-menu__social-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.222;
+  letter-spacing: 0.02em;
+  color: var(--highlight-color);
 }

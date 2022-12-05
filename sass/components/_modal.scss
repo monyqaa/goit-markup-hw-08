@@ -9,15 +9,23 @@
 
 .modal__window {
   position: absolute;
-  width: 528px;
-  min-height: 581px;
-  background-color: var(--second-type-color);
-  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+  width: 100%;
+  padding: 40px;
+  background-color: var(--second-type-color);
+  transform: translate(-50%, -50%);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+  }
 }
 
 .modal__close-btn {
@@ -30,6 +38,12 @@
   top: 8px;
   right: 8px;
   padding: 0;
+  transition: fill var(--transition);
+
+  &:hover,
+  &:focus {
+    fill: var(--highlight-color);
+  }
 }
 
 .modal__close-icon {
